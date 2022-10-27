@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tonoma/features/home/home_controller.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
+  final controller = HomeController();
 
 
   @override
@@ -20,6 +22,11 @@ class MyHomePage extends StatelessWidget {
               '1',
               style: Theme.of(context).textTheme.headline4,
             ),
+        ElevatedButton(onPressed: (){
+          controller.doSomeThing();
+        },
+            child: const Text('press me'),
+        ),
           ],
         ),
       ),
