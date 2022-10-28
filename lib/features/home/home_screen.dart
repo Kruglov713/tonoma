@@ -17,7 +17,7 @@ class MyHomePage extends StatelessWidget {
       ),
       body: StreamBuilder<HomeState>(
 
-        stream: controller.streamState,
+        stream: controller.stream,
         builder: (context, snapshot) {
           return Center(
             child: Column(
