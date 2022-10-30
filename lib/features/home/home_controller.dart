@@ -1,10 +1,25 @@
 
+import 'dart:async';
+
 import 'package:tonoma/features/home/home_state.dart';
 
 
 
 class HomeController {
-  get streamState => null;
+  StreamController<HomeState> get _controller => StreamController<HomeState>.broadcast();
+
+  Stream<HomeState> get stream => _controller.stream;
+
+  void init(){
+    _controller.add(HomeState(
+      allTaskComplete: false,
+      error: null,
+      isLoading: false,
+      tasks: [])
+
+    );
+  }
+
 
   void doSomeThing() {
     print('eject1');
