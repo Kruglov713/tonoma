@@ -1,23 +1,19 @@
 
-
 import 'package:tonoma/features/common/model/task_model.dart';
 
 
-class HomeState {
 
-  HomeState({
-    this.tasks = const [],
-    this.error,
-    this.isLoading = false,
-    this.allTasksComplete = false});
+class HomeState{HomeState({
+  this.allTaskComplete = false,
+  this.error,
+  this.isLoading = false,
+  this.tasks= const [],
+});
 
-  final List<TaskModel> tasks;
-
-  final Object? error;
-
-  final bool isLoading;
-
-  final bool allTasksComplete;
+final bool allTaskComplete;
+final Object? error;
+final bool isLoading;
+final List<TaskModel> tasks;
 
 
 }
